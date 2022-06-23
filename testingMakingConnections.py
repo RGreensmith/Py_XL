@@ -15,5 +15,12 @@ sheet = wb_obj.active
 
 print(sheet["B2"].value)
 
+#populate pandas df with content of xlsx
 df = pd.DataFrame(columns=['A','B','C'],index=[1,2,3])
+df.loc['1','A'] = sheet["B2"].value
+
+
 print(df)
+df.to_excel("to_ignore/df.xlsx")
+
+### End ###
