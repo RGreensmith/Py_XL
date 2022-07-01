@@ -19,8 +19,7 @@ def py_xl_BNG(habTypes):
     both defaulted to '0'
 
     Returns:
-    pandas dataframe of habitat types and their corresponding Biodiversity Units
-    and saves to specified location.
+    Populates BNG metric table
     """
     # Create  empty df for results 
     results = pd.DataFrame()
@@ -32,7 +31,7 @@ def py_xl_BNG(habTypes):
 
     xlsx_file = Path('to_ignore',"BNG_no_macros_3_1.xlsx")
     wb = openpyxl.load_workbook(xlsx_file)
-    sheet = wb.get_sheet_by_name('A-2 Site Habitat Creation')
+    sheet = wb.get_sheet_by_name('A-2 Site Habitat Creation')x
 
     # Loop through habitats to calculate Biodiversity Units
     
